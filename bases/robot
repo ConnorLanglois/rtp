@@ -1,0 +1,8 @@
+(person Connor)
+(person Bob)
+(likes Connor AI)
+(hates Bob AI)
+(or (not (person ?x1)) (not (likes ?x1 ?x2)) (makes ?x1 ?x2))
+(or (not (person ?x3)) (not (hates ?x3 ?x4)) (destroys ?x3 ?x4))
+(or (not (destroys ?x5 ?x7)) (not (makes ?x6 ?x7)) (hates ?x5 ?x6))
+(or (not (makes ?x8 ?x10)) (not (destroys ?x9 ?x10)) (hates ?x8 ?x9))

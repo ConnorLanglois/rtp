@@ -1,0 +1,55 @@
+Knowledge base: garden
+Theorem: (grows John Carrots)
+
+Knowledge base:
+    (PERSON JOHN)
+    (PERSON MARY)
+    (VEGETABLE CARROTS)
+    (LIKES JOHN CARROTS)
+    (LIKES MARY CARROTS)
+    (OR (NOT (VEGETABLE ?X1)) (NOT (LIKES JOHN ?X1)) (GROWS JOHN ?X1))
+    (OR (NOT (PERSON ?X2)) (NOT (OWNS ?X2 ?X3)) (EATS ?X2 ?X3))
+    (OR (NOT (PERSON ?X4)) (NOT (GROWS ?X4 ?X5)) (OWNS ?X4 ?X5))
+    (OR (NOT (PERSON ?X6)) (NOT (GROWS ?X6 ?X7)) (OWNS ?X6 GARDEN))
+
+Axiom:    (NOT (GROWS JOHN CARROTS))
+
+Resolved: (OR (NOT (VEGETABLE ?X1)) (NOT (LIKES JOHN ?X1)) (GROWS JOHN ?X1))
+
+Axiom:    (OR (NOT (VEGETABLE CARROTS)) (NOT (LIKES JOHN CARROTS)))
+
+Resolved: (LIKES JOHN CARROTS)
+
+Axiom:    (NOT (VEGETABLE CARROTS))
+
+Resolved: (VEGETABLE CARROTS)
+
+Axiom:    NIL
+
+
+DFS-AGENT-PROGRAM Succeeded
+Nodes expanded: 3
+Max size of queue: 2
+Runtime: 0.049
+
+
+
+Axiom:    (NOT (GROWS JOHN CARROTS))
+
+Resolved: (OR (NOT (VEGETABLE ?X1)) (NOT (LIKES JOHN ?X1)) (GROWS JOHN ?X1))
+
+Axiom:    (OR (NOT (VEGETABLE CARROTS)) (NOT (LIKES JOHN CARROTS)))
+
+Resolved: (LIKES JOHN CARROTS)
+
+Axiom:    (NOT (VEGETABLE CARROTS))
+
+Resolved: (VEGETABLE CARROTS)
+
+Axiom:    NIL
+
+
+A*-AGENT-PROGRAM Succeeded
+Nodes expanded: 4
+Max size of queue: 2
+Runtime: 0.0

@@ -1,0 +1,54 @@
+Knowledge base: robot
+Theorem: (makes Connor AI)
+
+Knowledge base:
+    (PERSON CONNOR)
+    (PERSON BOB)
+    (LIKES CONNOR AI)
+    (HATES BOB AI)
+    (OR (NOT (PERSON ?X1)) (NOT (LIKES ?X1 ?X2)) (MAKES ?X1 ?X2))
+    (OR (NOT (PERSON ?X3)) (NOT (HATES ?X3 ?X4)) (DESTROYS ?X3 ?X4))
+    (OR (NOT (DESTROYS ?X5 ?X7)) (NOT (MAKES ?X6 ?X7)) (HATES ?X5 ?X6))
+    (OR (NOT (MAKES ?X8 ?X10)) (NOT (DESTROYS ?X9 ?X10)) (HATES ?X8 ?X9))
+
+Axiom:    (NOT (MAKES CONNOR AI))
+
+Resolved: (OR (NOT (PERSON ?X1)) (NOT (LIKES ?X1 ?X2)) (MAKES ?X1 ?X2))
+
+Axiom:    (OR (NOT (PERSON CONNOR)) (NOT (LIKES CONNOR AI)))
+
+Resolved: (LIKES CONNOR AI)
+
+Axiom:    (NOT (PERSON CONNOR))
+
+Resolved: (PERSON CONNOR)
+
+Axiom:    NIL
+
+
+DFS-AGENT-PROGRAM Succeeded
+Nodes expanded: 3
+Max size of queue: 2
+Runtime: 0.032
+
+
+
+Axiom:    (NOT (MAKES CONNOR AI))
+
+Resolved: (OR (NOT (PERSON ?X1)) (NOT (LIKES ?X1 ?X2)) (MAKES ?X1 ?X2))
+
+Axiom:    (OR (NOT (PERSON CONNOR)) (NOT (LIKES CONNOR AI)))
+
+Resolved: (LIKES CONNOR AI)
+
+Axiom:    (NOT (PERSON CONNOR))
+
+Resolved: (PERSON CONNOR)
+
+Axiom:    NIL
+
+
+A*-AGENT-PROGRAM Succeeded
+Nodes expanded: 4
+Max size of queue: 2
+Runtime: 0.008

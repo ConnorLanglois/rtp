@@ -1,0 +1,39 @@
+Knowledge base: garden
+Theorem: (person John)
+
+Knowledge base:
+    (PERSON JOHN)
+    (PERSON MARY)
+    (VEGETABLE CARROTS)
+    (LIKES JOHN CARROTS)
+    (LIKES MARY CARROTS)
+    (OR (NOT (VEGETABLE ?X1)) (NOT (LIKES JOHN ?X1)) (GROWS JOHN ?X1))
+    (OR (NOT (PERSON ?X2)) (NOT (OWNS ?X2 ?X3)) (EATS ?X2 ?X3))
+    (OR (NOT (PERSON ?X4)) (NOT (GROWS ?X4 ?X5)) (OWNS ?X4 ?X5))
+    (OR (NOT (PERSON ?X6)) (NOT (GROWS ?X6 ?X7)) (OWNS ?X6 GARDEN))
+
+Axiom:    (NOT (PERSON JOHN))
+
+Resolved: (PERSON JOHN)
+
+Axiom:    NIL
+
+
+DFS-AGENT-PROGRAM Succeeded
+Nodes expanded: 1
+Max size of queue: 1
+Runtime: 0.032
+
+
+
+Axiom:    (NOT (PERSON JOHN))
+
+Resolved: (PERSON JOHN)
+
+Axiom:    NIL
+
+
+A*-AGENT-PROGRAM Succeeded
+Nodes expanded: 2
+Max size of queue: 1
+Runtime: 0.002
