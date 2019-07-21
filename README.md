@@ -19,7 +19,7 @@ Clone the repo.
 
 ### Running
 
-1. Add `src/lib/agent` as `agent` to `~/quicklisp/local-projects`
+1. Add `lib/agent` as `agent` to `~/quicklisp/local-projects`
 
 2. Add `src` as `rtp` to `~/quicklisp/local-projects`
 
